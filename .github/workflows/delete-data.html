@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data deletion — {{app_name}}</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f8f9fa;
+      padding: 24px 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 8px; color: #111; }
+    h2 { font-size: 1.25rem; margin-top: 28px; margin-bottom: 12px; color: #222; }
+    p, li { font-size: 0.95rem; margin-bottom: 10px; }
+    ul, ol { padding-left: 24px; margin-bottom: 16px; }
+    .date { color: #666; font-size: 0.9rem; margin-bottom: 24px; }
+    a { color: #1a73e8; }
+    .step { background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e0e0e0; margin-bottom: 12px; }
+    .step-number { display: inline-block; width: 28px; height: 28px; background: #1a73e8; color: #fff; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; font-size: 0.85rem; margin-right: 10px; }
+    .contact { background: #e8f0fe; padding: 16px; border-radius: 8px; margin-top: 24px; }
+    .warning { background: #fff3cd; padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ffc107; margin: 16px 0; }
+    .doc-nav { margin: 0 0 20px 0; padding: 10px 0; border-bottom: 1px solid #e0e0e0; font-size: 0.85rem; }
+    .doc-nav a { color: #1a73e8; margin-right: 12px; text-decoration: none; }
+    .doc-nav a:hover { text-decoration: underline; }
+    .doc-footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e0e0e0; font-size: 0.85rem; color: #666; }
+    .doc-footer a { color: #1a73e8; margin-right: 12px; text-decoration: none; }
+    .data-deletion-url { background: #e8f4fd; padding: 12px 16px; border-radius: 8px; border: 1px solid #1a73e8; margin: 12px 0 20px 0; font-size: 0.95rem; word-break: break-all; }
+  </style>
+</head>
+<body>
+
+<nav class="doc-nav">
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="delete-data.html">Data Deletion</a>
+</nav>
+
+<h1>Data deletion instructions</h1>
+<p class="date">Last updated: {{docs_date_en}} — {{app_name}} — {{app_id}}</p>
+
+<p class="data-deletion-url"><strong>Data Deletion URL (Google Play — Data deletion):</strong> <a href="{{data_deletion_url}}">{{data_deletion_url}}</a> — public page; no login or submission of personal data is required. Use this exact URL in Play Console (Data safety → Data deletion). <strong>Technical:</strong> the link is <strong>HTTPS</strong>; viewing this page does <strong>not require cookies</strong> from this site and does <strong>not rely on a redirect</strong> to another domain (use this exact destination URL in the console). The page lets users read data deletion instructions without logging in and without redirects.</p>
+
+<p><strong>This page describes how users can request deletion of their data associated with the app.</strong></p>
+
+<p><strong>We do not store personal data on our own server infrastructure — data is stored exclusively in Google services (Firebase, Google Analytics, AdMob).</strong></p>
+
+<p><strong>You can delete user data stored by the Controller in Firebase services (Authentication and Firestore), to the extent linked to your user account, directly in the app using Account → Delete account — without contacting support.</strong></p>
+
+<p><strong>You may also request deletion of your data from within the app or by email, even if you no longer have access to the device.</strong></p>
+
+<p><strong>The Controller does not keep additional copies of user data outside Google’s services used by the App (including Firebase, Google Analytics, and AdMob); all data deletion operations are performed directly in those services.</strong></p>
+<p>Deletion requests are fulfilled through Firebase Authentication and Cloud Firestore mechanisms.</p>
+
+<h2>Quick deletion of all data</h2>
+<ul>
+  <li><strong>Uninstall the app</strong> — removes all local data on the device.</li>
+  <li><strong>Delete account in the app</strong> (Account → Delete account) — removes your Firebase / Firestore data held by the Developer.</li>
+  <li><strong>Revoke Google access</strong> for the App at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> — blocks further YouTube API access until you authorise again; it does not delete Firebase account data by itself.</li>
+</ul>
+
+<p>We respect your right to have personal data erased (GDPR Art. 17). {{app_name}} is created by <strong>{{full_name}}</strong>, a {{legal_status_intro_en}} (developer pseudonym: {{pseudonym}}). Below we explain how you can delete your data.</p>
+
+<p><strong>Third-party providers:</strong> Some data may continue to be held by third-party providers in accordance with their own policies (e.g. Google), even after you use the options below.</p>
+
+<p><strong>YouTube Charts:</strong> shared aggregated chart metadata in Firestore (the same for everyone) — <strong>not personal data about you</strong>; no per-account deletion applies.</p>
+
+<h2>Google Analytics for Firebase (GA4)</h2>
+<p>Usage and product events are sent to <strong>Google Analytics for Firebase (GA4)</strong> when you use the production App. The Developer does not host a separate analytics database. Data is processed by Google; retention and deletion follow <a href="https://policies.google.com/privacy" target="_blank">Google’s Privacy Policy</a> and <a href="https://support.google.com/analytics/answer/7667196" target="_blank">Google Analytics / Firebase data settings</a>. You may manage certain activity and account-related controls in your <a href="https://myaccount.google.com" target="_blank">Google Account</a>.</p>
+<p>Analytics data is not used by the Controller to directly identify you.</p>
+<p><strong>Data are processed in pseudonymised form.</strong></p>
+<p>Google Analytics for Firebase applies measures that limit identifiability, including IP address anonymisation in line with Google’s practices.</p>
+
+<h2>Local storage (AsyncStorage)</h2>
+<p>YouTube cache and settings are stored in <strong>AsyncStorage</strong> <strong>only on the device</strong>; they are <strong>not used by the Controller to identify you</strong> (they may include metadata such as video titles or playlists in the cache). Contents are <strong>not additionally encrypted at the application level</strong>. <strong>Data are protected by the operating system’s security mechanisms (app sandbox).</strong> <strong>Remove them by uninstalling the app or using Clear data</strong> in Android settings (see also Option 3).</p>
+
+<h2>Option 1: Log out from the App</h2>
+
+<div class="step">
+  <p><span class="step-number">1</span> Open {{app_name}}.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">2</span> Open the <strong>Account</strong> section (<strong>Konto</strong> in the App; account icon, top right).</p>
+</div>
+<div class="step">
+  <p><span class="step-number">3</span> <strong>Log out of YouTube</strong> — removes Google/YouTube tokens from the App and ends the YouTube session in the App. Does <strong>not automatically delete</strong> the <code>video-storage</code> record from device storage.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">4</span> <strong>Log out of the App</strong> — ends the Firebase session, removes Google/YouTube tokens, and clears visible state in the App. Does <strong>not guarantee deletion</strong> of the <code>video-storage</code> file from AsyncStorage.</p>
+</div>
+
+<div class="warning">
+  <p><strong>Note:</strong> To <strong>reliably</strong> remove the local copy of your data (including <code>video-storage</code>), use Option 3 (uninstall) or your device’s <strong>Clear data</strong> / <strong>Clear storage</strong> for this App.</p>
+</div>
+
+<h2>Option 2: Revoke YouTube OAuth access</h2>
+
+<div class="step">
+  <p><span class="step-number">1</span> Open <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a>.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">2</span> Find <strong>{{app_name}}</strong> in the list.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">3</span> Click <strong>Remove access</strong> to revoke the App’s permissions to your Google/YouTube account.</p>
+</div>
+
+<h2>Option 3: Uninstall the App</h2>
+<p>Uninstalling the App from an Android device typically removes all locally stored App data (AsyncStorage), including:</p>
+<ul>
+  <li>Cached liked videos and playlists;</li>
+  <li>Locally stored authentication tokens;</li>
+  <li>User preferences (theme, settings);</li>
+  <li>Local ad / ad-free mode data;</li>
+  <li>On-device analytics milestone flags (AsyncStorage keys such as <code>anl_*</code>) used for first-open and retention events.</li>
+</ul>
+
+<h2>Option 4: Delete account in the App</h2>
+
+<div class="step">
+  <p><span class="step-number">1</span> Open {{app_name}}.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">2</span> Go to the <strong>Account</strong> section (<strong>Konto</strong> in the App).</p>
+</div>
+<div class="step">
+  <p><span class="step-number">3</span> Choose <strong>Delete account</strong>.</p>
+</div>
+<div class="step">
+  <p><span class="step-number">4</span> Confirm the action. Your account and data linked to it in Firebase (Authentication and Firestore) will be permanently deleted.</p>
+</div>
+
+<p>Deleting your account includes:</p>
+<ul>
+  <li>Account data (email, UID) in Firebase Authentication;</li>
+  <li>Your user data in Firestore (e.g. subscription status);</li>
+  <li>Related identifiers and app data linked to your account.</li>
+</ul>
+
+<div class="warning">
+  <p><strong>Warning:</strong> Deleting your account is irreversible. You will not be able to recover your data afterwards.</p>
+</div>
+
+<p>Deletion of data in Firebase takes place promptly after you complete the action, subject to technical delays in Google’s backup systems.</p>
+
+<h2>Option 5: Server data deletion request (email)</h2>
+<p>Alternatively, to delete data held on our backend (Firebase Authentication, Firestore), you can email the Developer at:</p>
+
+<div class="contact">
+  <p><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
+  <p>Include the email address linked to your App account. We will process the request within <strong>30 days</strong> of receipt. The maximum time to respond is 30 days, in accordance with Art. 12(3) GDPR. Please note that after deletion some data may be retained for a limited time in backup copies in accordance with Google Firebase policies.</p>
+</div>
+
+<h2>What happens under each option?</h2>
+<ul>
+  <li><strong>Option 1 (log out):</strong> OAuth tokens and in-App session end — the <code>video-storage</code> record <strong>may remain</strong> on the device.</li>
+  <li><strong>Option 2 (revoke OAuth):</strong> removes the App’s YouTube API access on Google’s side — does <strong>not delete</strong> the <code>video-storage</code> file on the device.</li>
+  <li><strong>Option 3 (uninstall / clear app data):</strong> typically <strong>removes all</strong> local App storage (AsyncStorage), including <code>video-storage</code>, local tokens, and preferences.</li>
+  <li><strong>Option 4 (delete account in the App):</strong> removes your account data (Firebase Authentication), your user data in Firestore, and related identifiers. Google analytics data may be retained in accordance with Google’s policies.</li>
+  <li><strong>Option 5 (email):</strong> Firebase / Firestore account data held by the Developer (account email, display name, UID, subscription metadata) — handled individually per request.</li>
+</ul>
+
+<p>Data processed by third parties (Google AdMob, Google Play Billing, <strong>Google Analytics for Firebase (GA4)</strong>) is retained according to their policies. See <a href="https://policies.google.com/privacy" target="_blank">Google’s Privacy Policy</a>. Erasing local App data does not delete all historical analytics data already received by Google’s servers.</p>
+
+<footer class="doc-footer">
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="delete-data.html">Data Deletion</a>
+</footer>
+
+</body>
+</html>
