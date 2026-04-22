@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — {{app_name}}</title>
+  <title>Privacy Policy — YouTube Like Manager</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -43,9 +43,9 @@
 </nav>
 
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: {{docs_date_en}}</p>
+<p class="date">Last updated: 6 April 2026</p>
 
-<p>This Privacy Policy describes how the <strong>{{app_name}}</strong> application (the &quot;App&quot;), created and made available by a <strong>{{legal_status_intro_en}}</strong> <strong>{{full_name}}</strong> (developer pseudonym: {{pseudonym}}) (the &quot;Controller&quot; or &quot;Developer&quot;), processes personal data of users (the &quot;User&quot;, &quot;you&quot;) in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and other applicable data protection laws.</p>
+<p>This Privacy Policy describes how the <strong>YouTube Like Manager</strong> application (the &quot;App&quot;), created and made available by a <strong>natural person not engaged in business activity</strong> <strong>Sławomir Toporek</strong> (developer pseudonym: innostopco) (the &quot;Controller&quot; or &quot;Developer&quot;), processes personal data of users (the &quot;User&quot;, &quot;you&quot;) in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and other applicable data protection laws.</p>
 
 <p><strong>User data is not sold, rented, or shared with third parties for marketing purposes.</strong></p>
 
@@ -56,14 +56,14 @@
 <p><strong>App navigation (labels in the App):</strong> The main bottom tabs are <strong>My Videos</strong>, <strong>Liked</strong>, <strong>Charts</strong>, <strong>Playlists</strong>, and <strong>Create</strong>. Account settings and this Privacy Policy are under <strong>Konto</strong> (Account).</p>
 
 <h2>1. Data controller</h2>
-<p>The controller of your personal data is a <strong>{{legal_status_intro_en}}</strong>, independent creator of the App:</p>
+<p>The controller of your personal data is a <strong>natural person not engaged in business activity</strong>, independent creator of the App:</p>
 <ul>
-  <li><strong>Full name:</strong> {{full_name}}</li>
-  <li><strong>Developer pseudonym:</strong> {{pseudonym}}</li>
-  <li><strong>Legal status:</strong> {{legal_status_list_en}}</li>
-  <li><strong>Country of residence:</strong> {{country_en}}</li>
-  <li><strong>Contact email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>
-  <li><strong>App identifier:</strong> {{app_id}}</li>
+  <li><strong>Full name:</strong> Sławomir Toporek</li>
+  <li><strong>Developer pseudonym:</strong> innostopco</li>
+  <li><strong>Legal status:</strong> natural person, not operating a registered business</li>
+  <li><strong>Country of residence:</strong> Poland (European Union)</li>
+  <li><strong>Contact email:</strong> <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a></li>
+  <li><strong>App identifier:</strong> com.slatop.youtubelikemanager</li>
 </ul>
 <p>The Controller acts as a natural person not conducting a business and does not have a tax identification number (NIP) or a company seat. For all matters relating to personal data protection, contact the email address above. <strong>The Controller is also the contact person for all personal data protection matters (no separate DPO appointed).</strong></p>
 
@@ -245,7 +245,7 @@
 <p>App state is partly stored locally using a persistence mechanism (including the Zustand library and AsyncStorage). Data includes YouTube-related cache and preferences, stored under <strong>AsyncStorage keys</strong> following the pattern <code>video-storage-{user identifier}-{opaque suffix}</code> (the opaque suffix is derived from your account email; the &quot;<code>video-storage</code> record&quot;).</p>
 <ul>
   <li><strong>Firebase Authentication account data:</strong> <strong>User data associated with the account is retained until you delete the account or submit a deletion request.</strong> Your <strong>session</strong> in the App ends when you log out of the app; logging out <strong>does not automatically delete</strong> your user record on Firebase. <strong>Account data is retained until you delete your account in the App or request deletion by email.</strong> Deletion of account data held by the Controller (Firebase / Firestore) occurs when you use <strong>Account → Delete account</strong> in the App or following an email request handled by the Controller.</li>
-  <li><strong>Local copy of YouTube data and related App state (<code>video-storage</code> record):</strong> may <strong>remain on the device after you log out of YouTube or the App</strong>. Log-out removes OAuth tokens and clears UI-visible data in RAM, but <strong>does not guarantee deletion</strong> of the <code>video-storage</code> file from device storage. <strong>To permanently remove the local copy:</strong> uninstall the App or on Android: Settings → Apps → {{app_name}} → Storage → <strong>Clear storage / Clear data</strong> (wording may vary by OS version).</li>
+  <li><strong>Local copy of YouTube data and related App state (<code>video-storage</code> record):</strong> may <strong>remain on the device after you log out of YouTube or the App</strong>. Log-out removes OAuth tokens and clears UI-visible data in RAM, but <strong>does not guarantee deletion</strong> of the <code>video-storage</code> file from device storage. <strong>To permanently remove the local copy:</strong> uninstall the App or on Android: Settings → Apps → YouTube Like Manager → Storage → <strong>Clear storage / Clear data</strong> (wording may vary by OS version).</li>
   <li><strong>Subscription data:</strong> for the duration of the subscription and any period required by law.</li>
   <li><strong>Advertising data:</strong> per Google AdMob retention policies.</li>
   <li><strong>Google Analytics for Firebase (GA4) event data:</strong> retained according to Google’s settings for the linked Analytics property. GA4 offers configurable event-data retention (e.g. <strong>2 months or 14 months</strong>, depending on the Controller’s configuration) (set in GA4 Admin → Data Settings → Data Retention). The Developer does not maintain a separate copy of raw analytics logs outside Google’s services.</li>
@@ -265,8 +265,8 @@
   <li><strong>Withdraw consent</strong> (Art. 7(3)) — at any time, without affecting lawfulness of processing before withdrawal.</li>
 </ul>
 <p><strong>Withdrawing consent:</strong> where processing is based on your consent (personalised ads, <strong>Google Analytics for Firebase (GA4)</strong> in the EEA/UK), you may withdraw consent at any time via the App's consent settings, your device settings, or by contacting the Controller. Withdrawal does not affect the lawfulness of processing before withdrawal. You can also manage ad consent via your Android device settings (e.g. <em>Settings → Google → Ads</em>) and analytics preferences where available in your Google Account.</p>
-<p>To exercise these rights, contact the Controller at <a href="mailto:{{email}}">{{email}}</a>.</p>
-<p>You also have the right to lodge a complaint with a supervisory authority for data protection. In {{residence_country_en}} this is the <strong>{{supervisory_name_en}}</strong>, {{supervisory_address_en}}, <a href="{{supervisory_url}}" target="_blank">{{supervisory_url}}</a>.</p>
+<p>To exercise these rights, contact the Controller at <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a>.</p>
+<p>You also have the right to lodge a complaint with a supervisory authority for data protection. In Poland this is the <strong>President of the Personal Data Protection Office (UODO)</strong>, ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl" target="_blank">https://uodo.gov.pl</a>.</p>
 
 <h2>8. Deleting data</h2>
 <p>Instructions for deleting your data are also published as a <strong>standalone web page</strong> at the public URL linked from the App (Account section) and from the Google Play listing — the same host as this Privacy Policy (<a href="delete-data.html">delete-data.html</a>).</p>
@@ -276,7 +276,7 @@
 <p>You may delete your account:</p>
 <ul>
   <li><strong>In the app</strong>, under Account → Delete account;</li>
-  <li>Or by contacting the Controller by email at <a href="mailto:{{email}}">{{email}}</a> (email requests are handled within 30 days).</li>
+  <li>Or by contacting the Controller by email at <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a> (email requests are handled within 30 days).</li>
 </ul>
 <p>The maximum time to respond is 30 days, in accordance with Art. 12(3) GDPR.</p>
 <p><strong>Note on local AsyncStorage data:</strong> data is kept <strong>only on the device</strong> and is <strong>not used by the Controller to identify you</strong> (it may include metadata such as video titles or playlists in the cache). It is <strong>not additionally encrypted at the application level</strong> (OS sandbox). <strong>Remove it by uninstalling the App or clearing app data.</strong> The <code>video-storage</code> key uses an opaque suffix — the email is not stored in plaintext in the key. <strong>Locally stored data is not shared with other apps or transmitted to the Developer’s servers.</strong></p>
@@ -286,14 +286,14 @@
   <li><strong>Logging out of the app or YouTube</strong> (&quot;Account&quot; section): ends the session, removes OAuth tokens from the App, and clears visible state from memory — <strong>this is not the same as automatically deleting the <code>video-storage</code> record from AsyncStorage</strong>. For full removal of the local copy, see below.</li>
   <li><strong>Permanent removal of the local copy (including the <code>video-storage</code> record):</strong> uninstall the App or clear its data in Android settings (Storage → Clear data / Clear storage).</li>
   <li><strong>YouTube API access (OAuth):</strong> revoke access at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> — the App cannot fetch new YouTube data until you authorise again; the local <code>video-storage</code> file may still exist until you clear app data or uninstall.</li>
-  <li><strong>Firebase / Firestore data:</strong> delete your account in the App (Account → Delete account) or email the Controller at <a href="mailto:{{email}}">{{email}}</a>.</li>
+  <li><strong>Firebase / Firestore data:</strong> delete your account in the App (Account → Delete account) or email the Controller at <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a>.</li>
   <li><strong>Advertising ID:</strong> reset or disable it in your Android device settings (e.g. Settings → Google → Ads).</li>
   <li><strong>Google Analytics for Firebase (GA4):</strong> data is held in Google’s analytics systems. Analytics data is not used by the Controller to directly identify you. <strong>Data are processed in pseudonymised form.</strong> Google Analytics for Firebase applies measures that limit identifiability, including IP address anonymisation in line with Google’s practices. You can manage certain Google account–related data and activity controls via <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a> and Google’s privacy tools; deletion of your Firebase account (see above) does not automatically erase all historical analytics aggregates retained by Google under its policies.</li>
 </ul>
 <p>Some data may continue to be held by third-party providers in accordance with their own policies (e.g. Google).</p>
 
 <h2>9. Children</h2>
-<p>The App is not intended for persons under 16 years of age and is <strong>not directed at children as the primary target audience</strong>. The App is not labelled as children-oriented in Google Play (it is not part of the &quot;Designed for Families&quot; programme). The App is designed for YouTube users who manage playlists and liked videos, which presupposes an active Google/YouTube account and adult-level usage. The Controller does not knowingly collect personal data from children. If you believe a child has provided data through the App, contact <a href="mailto:{{email}}">{{email}}</a> — the Controller will take steps to delete it promptly.</p>
+<p>The App is not intended for persons under 16 years of age and is <strong>not directed at children as the primary target audience</strong>. The App is not labelled as children-oriented in Google Play (it is not part of the &quot;Designed for Families&quot; programme). The App is designed for YouTube users who manage playlists and liked videos, which presupposes an active Google/YouTube account and adult-level usage. The Controller does not knowingly collect personal data from children. If you believe a child has provided data through the App, contact <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a> — the Controller will take steps to delete it promptly.</p>
 
 <h2>10. Automated decisions and profiling</h2>
 <p>Personal data collected through the App is <strong>not used for automated decision-making or profiling</strong> within the meaning of Art. 22 GDPR that would produce legal effects or similarly significantly affect you. Standard ad personalisation performed by third-party providers (Google AdMob) based on their own data-processing practices is governed by those providers’ policies and is subject to your consent choices.</p>
@@ -319,7 +319,7 @@
 <div class="contact">
   <p>For questions about this Privacy Policy or processing of personal data:</p>
   <ul>
-    <li><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>
+    <li><strong>Email:</strong> <a href="mailto:innostopco@gmail.com">innostopco@gmail.com</a></li>
   </ul>
 </div>
 
