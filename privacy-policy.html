@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — {{app_name}}</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f8f9fa;
+      padding: 24px 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 8px; color: #111; }
+    h2 { font-size: 1.25rem; margin-top: 32px; margin-bottom: 12px; color: #222; }
+    h3 { font-size: 1.05rem; margin-top: 20px; margin-bottom: 8px; color: #333; }
+    p, li { font-size: 0.95rem; margin-bottom: 10px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    .date { color: #666; font-size: 0.9rem; margin-bottom: 24px; }
+    a { color: #1a73e8; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { text-align: left; padding: 10px 12px; border: 1px solid #ddd; font-size: 0.9rem; }
+    th { background: #f0f0f0; font-weight: 600; }
+    .contact { background: #e8f0fe; padding: 16px; border-radius: 8px; margin-top: 24px; }
+    .data-safety-callout { background: #e8f4fd; padding: 14px 16px; border-radius: 8px; border-left: 4px solid #1a73e8; margin: 16px 0; font-size: 0.95rem; }
+  .doc-nav { margin: 0 0 20px 0; padding: 10px 0; border-bottom: 1px solid #e0e0e0; font-size: 0.85rem; }
+  .doc-nav a { color: #1a73e8; margin-right: 12px; text-decoration: none; }
+  .doc-nav a:hover { text-decoration: underline; }
+  .doc-footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e0e0e0; font-size: 0.85rem; color: #666; }
+  .doc-footer a { color: #1a73e8; margin-right: 12px; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="doc-nav">
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="delete-data.html">Data Deletion</a>
+</nav>
+
+<h1>Privacy Policy</h1>
+<p class="date">Last updated: {{docs_date_en}}</p>
+
+<p>This Privacy Policy describes how the <strong>{{app_name}}</strong> application (the &quot;App&quot;), created and made available by a <strong>{{legal_status_intro_en}}</strong> <strong>{{full_name}}</strong> (developer pseudonym: {{pseudonym}}) (the &quot;Controller&quot; or &quot;Developer&quot;), processes personal data of users (the &quot;User&quot;, &quot;you&quot;) in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and other applicable data protection laws.</p>
+
+<p><strong>User data is not sold, rented, or shared with third parties for marketing purposes.</strong></p>
+
+<p><strong>For certain services (in particular Google Analytics for Firebase and Google AdMob), Google may act as a processor or as an independent controller, depending on the specific service and its use.</strong></p>
+
+<p>For users in the <strong>EEA/UK</strong>, the mobile App (Android) presents a <strong>consent message (CMP via Google UMP SDK)</strong> on <strong>first launch</strong> <strong>before</strong> analytics and advertising-related processing begins; consent signals are applied through Google Consent Mode. <strong>In the mobile app (Android), analytics and ads are not started before the user gives consent in the EEA.</strong> <strong>In the web version, some consent mechanisms may not be available in exactly the same scope as in the mobile app.</strong> In production builds, <strong>Firebase Analytics collection is disabled until the UMP flow completes</strong> (then enabled only if consent status allows).</p>
+
+<p><strong>App navigation (labels in the App):</strong> The main bottom tabs are <strong>My Videos</strong>, <strong>Liked</strong>, <strong>Charts</strong>, <strong>Playlists</strong>, and <strong>Create</strong>. Account settings and this Privacy Policy are under <strong>Konto</strong> (Account).</p>
+
+<h2>1. Data controller</h2>
+<p>The controller of your personal data is a <strong>{{legal_status_intro_en}}</strong>, independent creator of the App:</p>
+<ul>
+  <li><strong>Full name:</strong> {{full_name}}</li>
+  <li><strong>Developer pseudonym:</strong> {{pseudonym}}</li>
+  <li><strong>Legal status:</strong> {{legal_status_list_en}}</li>
+  <li><strong>Country of residence:</strong> {{country_en}}</li>
+  <li><strong>Contact email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>
+  <li><strong>App identifier:</strong> {{app_id}}</li>
+</ul>
+<p>The Controller acts as a natural person not conducting a business and does not have a tax identification number (NIP) or a company seat. For all matters relating to personal data protection, contact the email address above. <strong>The Controller is also the contact person for all personal data protection matters (no separate DPO appointed).</strong></p>
+
+<h2>2. What data we collect</h2>
+
+<table>
+  <tr>
+    <th>Data category</th>
+    <th>Examples</th>
+    <th>Source</th>
+  </tr>
+  <tr>
+    <td>Account identification data</td>
+    <td>Email address, display name, user identifier (UID)</td>
+    <td>Firebase Authentication / Google Sign-In</td>
+  </tr>
+  <tr>
+    <td>YouTube-related data</td>
+    <td>List of liked videos, playlists and their content, YouTube channel title</td>
+    <td>YouTube Data API v3 (OAuth) and a local copy in AsyncStorage (keys such as <code>video-storage-{id}-{opaque suffix}</code>)</td>
+  </tr>
+  <tr>
+    <td>Subscription data</td>
+    <td>Premium subscription status, transaction identifiers</td>
+    <td>Google Play Billing / Firestore</td>
+  </tr>
+  <tr>
+    <td>User preferences</td>
+    <td>Selected theme (light/dark), display settings</td>
+    <td>Device (AsyncStorage, usually in the same persisted store as the YouTube cache — keys <code>video-storage-{id}-{opaque suffix}</code>)</td>
+  </tr>
+  <tr>
+    <td>Advertising-related data</td>
+    <td>Google advertising ID (Ad ID), ad interactions, ad-free mode status</td>
+    <td>Google AdMob SDK</td>
+  </tr>
+  <tr>
+    <td>Technical data</td>
+    <td>Device type, OS version, IP address (processed by Google services)</td>
+    <td>Automatically via SDKs</td>
+  </tr>
+  <tr>
+    <td>Device region (locale)</td>
+    <td>ISO 3166-1 alpha-2 region code (e.g. PL, US, GB)</td>
+    <td>Read on-device via <strong>expo-localization</strong> to choose the default YouTube Charts list; not sent to the Developer’s servers for user identification</td>
+  </tr>
+  <tr>
+    <td>App usage and product analytics</td>
+    <td>Pseudonymous identifiers (e.g. per-install app user id), session and engagement metrics, feature usage events (e.g. editor actions, Charts interactions, playlist saves, errors, premium and ad-related events), optional coarse country from device locale as user property</td>
+    <td><strong>Google Analytics for Firebase (GA4)</strong> via the Firebase Web SDK in the App. <strong>Google processes data in accordance with its own Privacy Policy and may act as an independent controller of personal data.</strong> <strong>Google Analytics for Firebase applies measures that limit identifiability in line with Google’s practices, including IP address anonymisation.</strong> The App does not send video files to analytics. Event parameters may include pseudonymous identifiers and contextual metadata (e.g. YouTube playlist or video IDs for product flows). The Developer does not operate a separate analytics database outside Google’s services.</td>
+  </tr>
+  <tr>
+    <td>On-device analytics flags</td>
+    <td>Dates and flags used to send one-time lifecycle events (e.g. first open, retention milestones) — stored in AsyncStorage under keys such as <code>anl_*</code></td>
+    <td>Device (AsyncStorage), read only by the App; not the same as server-side analytics</td>
+  </tr>
+</table>
+<div class="data-safety-callout">
+  <p><strong>Data safety (Google Play):</strong> The information in this Privacy Policy is <strong>consistent with</strong> the <strong>Data safety</strong> declaration submitted in Google Play Console for this App. Keep the Play form and this document aligned when you change data collection or SDKs.</p>
+  <p>User data is not sold or shared with third parties for marketing purposes.</p>
+  <p>User data is not used for sale and is not shared with data brokers.</p>
+  <p>The App does not use data for cross-app user tracking in a manner controlled by the Controller; data processing by Google may occur in accordance with Google’s own policies and user settings.</p>
+  <p>The App does not use advertising identifiers for cross-app tracking in third-party apps.</p>
+  <p>Analytics and technical data are processed in pseudonymised form and are not directly linked to user identity.</p>
+</div>
+
+<h2>3. Purposes and legal bases for processing</h2>
+
+<table>
+  <tr>
+    <th>Purpose</th>
+    <th>Legal basis (GDPR)</th>
+  </tr>
+  <tr>
+    <td>Authentication and user account management</td>
+    <td>Art. 6(1)(b) — performance of a contract (Terms)</td>
+  </tr>
+  <tr>
+    <td>Access to YouTube data (liked videos, playlists) at your request</td>
+    <td>Art. 6(1)(b) — performance of a contract; Art. 6(1)(a) — consent (OAuth)</td>
+  </tr>
+  <tr>
+    <td>Premium subscriptions and in-app purchases</td>
+    <td>Art. 6(1)(b) — performance of a contract</td>
+  </tr>
+  <tr>
+    <td>Displaying ads (including personalised ads)</td>
+    <td>Art. 6(1)(a) — consent (UMP / ad consent mechanisms)</td>
+  </tr>
+  <tr>
+    <td>Displaying non-personalised ads</td>
+    <td>Art. 6(1)(f) — legitimate interests (supporting a free app model)</td>
+  </tr>
+  <tr>
+    <td>Storing user preferences (theme, settings)</td>
+    <td>Art. 6(1)(f) — legitimate interests (app functionality)</td>
+  </tr>
+  <tr>
+    <td>Security and abuse prevention</td>
+    <td>Art. 6(1)(f) — legitimate interests</td>
+  </tr>
+  <tr>
+    <td>Default YouTube Charts list (device region)</td>
+    <td>Art. 6(1)(f) — legitimate interests (convenient default matching your locale)</td>
+  </tr>
+  <tr>
+    <td>Product and usage analytics (<strong>Google Analytics for Firebase (GA4)</strong>): understanding how the App is used, improving features, measuring errors and conversion funnels, security and abuse signals</td>
+    <td><strong>In the EEA/UK, the legal basis for Google Analytics for Firebase (GA4) is Art. 6(1)(a) — consent</strong> (ePrivacy and national rules on storage/access to information on the device). Consent is collected via the <strong>Google UMP SDK (CMP)</strong> on first launch, together with Google Consent Mode, <strong>before</strong> analytics and ad-related processing begins; <strong>where consent is not obtained, Firebase Analytics collection remains disabled</strong> in the App. <strong>In the mobile app (Android), analytics and ads are not started before the user gives consent in the EEA.</strong> <strong>In the web version, some consent mechanisms may not be available in exactly the same scope as in the mobile app.</strong> <strong>Outside the EEA/UK</strong>, where local law permits without prior consent, <strong>Art. 6(1)(f) — legitimate interests</strong> (running and improving the App) may apply to pseudonymous analytics in addition or instead.</td>
+  </tr>
+</table>
+<p><em>Processing is based primarily on performance of the contract (authentication, YouTube features), legitimate interests (security, non-personalised ads, and — outside the EEA/UK where permitted — pseudonymous analytics), and consent (personalised ads and Google Analytics for Firebase (GA4) in the EEA/UK).</em></p>
+
+<h2>4. Third-party services</h2>
+<p>The App uses the following third-party services, which may process your data:</p>
+
+<h3>4.1. Google Firebase</h3>
+<ul>
+  <li><strong>Firebase Authentication</strong> — user authentication (email, UID).</li>
+  <li><strong>Google Analytics for Firebase (GA4)</strong> — pseudonymous usage and product events from the App (see section 2). <strong>Firebase Crashlytics is not integrated</strong> — the App does not use Firebase to collect automated crash reports (stack traces). <strong>Google processes data in accordance with its own Privacy Policy and may act as an independent controller of personal data.</strong> Analytics data is not used by the Controller to directly identify you. <strong>Data are processed in pseudonymised form.</strong> Google Analytics for Firebase applies measures that limit identifiability, including IP address anonymisation in line with Google’s practices. Retention and deletion are governed by <a href="https://policies.google.com/privacy" target="_blank">Google’s policies</a> and your Google Account / device settings where applicable.</li>
+  <li><strong>Cloud Firestore</strong> — (i) storage of premium subscription status per user; (ii) public, non-personal documents in the <code>popularVideos</code> collection holding cached &quot;YouTube Charts&quot; metadata (video IDs, titles, thumbnails, statistics) sourced from official YouTube Charts playlists on a schedule. Those documents are readable by any App installation and do not contain your name, email, or OAuth tokens.</li>
+  <li><strong>Cloud Functions for Firebase</strong> — scheduled jobs that may call the YouTube Data API v3 using a server-side API key to refresh the chart cache stored in Firestore (no per-user OAuth for this feature).</li>
+  <li>The Controller uses Google services on the basis of Google’s standard data processing terms (Data Processing Agreement) offered by Google.</li>
+  <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>; Google Analytics: <a href="https://support.google.com/analytics/answer/6004245" target="_blank">How Google uses information from sites or apps that use our services</a>.</li>
+</ul>
+<p>Analytics data is processed in pseudonymised form and is not linked by the Controller to data that directly identifies you.</p>
+
+<h3>4.2. Google AdMob</h3>
+<ul>
+  <li>Display of ads (banners, full-screen ads, rewarded ads).</li>
+  <li>AdMob may collect the device advertising ID and data about ad interactions.</li>
+  <li>Ads may be personalised by Google based on your activity across Google services.</li>
+  <li>For users in the EEA/EU, personalised ads require consent (UMP).</li>
+  <li>If consent is not given (or personalised ads are not available), non-personalised ads may be shown.</li>
+  <li><strong>Google</strong> may use data for <strong>ad personalisation</strong> in line with its own <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and ad settings, subject to your consent choices.</li>
+  <li>Google Ads &amp; privacy: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></li>
+  <li>Depending on the user’s consent choices (CMP / UMP), ads displayed are <strong>personalised or non-personalised</strong>.</li>
+  <li>Ad-related data may be used by Google for ad effectiveness measurement, fraud prevention, and — where consent is given — ad personalisation.</li>
+</ul>
+
+<h3>4.3. YouTube Data API v3</h3>
+<ul>
+  <li>The App uses <strong>YouTube API Services</strong>. By using the App, you agree to the <a href="https://www.youtube.com/t/terms" target="_blank">YouTube Terms of Service</a>.</li>
+  <li>Access to your YouTube data (liked videos, playlists, channel information) under OAuth 2.0.</li>
+  <li>The App <strong>does not use YouTube data to build user profiles or for advertising purposes</strong>.</li>
+  <li>The App does not store or process YouTube data beyond the scope of your granted consent and App functionality.</li>
+  <li>A local copy of fetched data is kept on the device (including under AsyncStorage keys in the format <code>video-storage-{user identifier}-{opaque suffix}</code>, where the opaque suffix is derived from your account email and does not store the email in plaintext in the key) to allow faster reopening of the App after sign-in.</li>
+  <li>You grant consent when signing in to YouTube.</li>
+  <li>YouTube API terms: <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank">YouTube API Services Terms of Service</a></li>
+  <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+</ul>
+
+<h3>4.4. Google Play Billing</h3>
+<ul>
+  <li>Processing of payments for premium subscriptions.</li>
+  <li>Transactions are handled directly by Google Play — the App does not store payment card or bank account data.</li>
+</ul>
+
+<h3>4.5. Expo Updates</h3>
+<ul>
+  <li>Over-the-air (OTA) update mechanism provided by Expo.</li>
+  <li>Expo privacy policy: <a href="https://expo.dev/privacy" target="_blank">https://expo.dev/privacy</a></li>
+</ul>
+
+<h3>4.6. YouTube Charts</h3>
+<ul>
+  <li><strong>Shared cache:</strong> Scheduled <strong>Cloud Functions</strong> may refresh public chart metadata from YouTube Charts playlists into <strong>Firestore</strong> (<code>popularVideos/{chartCode}</code>). It is the same for everyone and is <strong>not</strong> your private account data.</li>
+  <li><strong>Default chart:</strong> <strong>expo-localization</strong> picks a default by <strong>device region</strong> (e.g. PL, US, GB) on-device; the Developer does not use this to identify you.</li>
+</ul>
+
+<h2>5. International transfers</h2>
+<p>Google services (Firebase, AdMob, YouTube API) may process data on servers located outside the European Economic Area (EEA), including in the United States. Transfers are based on:</p>
+<ul>
+  <li>Standard Contractual Clauses (SCC) approved by the European Commission;</li>
+  <li>An adequacy decision (e.g. EU-US Data Privacy Framework), where applicable;</li>
+  <li>Other safeguards under Chapter V GDPR.</li>
+</ul>
+
+<h2>6. Retention</h2>
+<p>App state is partly stored locally using a persistence mechanism (including the Zustand library and AsyncStorage). Data includes YouTube-related cache and preferences, stored under <strong>AsyncStorage keys</strong> following the pattern <code>video-storage-{user identifier}-{opaque suffix}</code> (the opaque suffix is derived from your account email; the &quot;<code>video-storage</code> record&quot;).</p>
+<ul>
+  <li><strong>Firebase Authentication account data:</strong> <strong>User data associated with the account is retained until you delete the account or submit a deletion request.</strong> Your <strong>session</strong> in the App ends when you log out of the app; logging out <strong>does not automatically delete</strong> your user record on Firebase. <strong>Account data is retained until you delete your account in the App or request deletion by email.</strong> Deletion of account data held by the Controller (Firebase / Firestore) occurs when you use <strong>Account → Delete account</strong> in the App or following an email request handled by the Controller.</li>
+  <li><strong>Local copy of YouTube data and related App state (<code>video-storage</code> record):</strong> may <strong>remain on the device after you log out of YouTube or the App</strong>. Log-out removes OAuth tokens and clears UI-visible data in RAM, but <strong>does not guarantee deletion</strong> of the <code>video-storage</code> file from device storage. <strong>To permanently remove the local copy:</strong> uninstall the App or on Android: Settings → Apps → {{app_name}} → Storage → <strong>Clear storage / Clear data</strong> (wording may vary by OS version).</li>
+  <li><strong>Subscription data:</strong> for the duration of the subscription and any period required by law.</li>
+  <li><strong>Advertising data:</strong> per Google AdMob retention policies.</li>
+  <li><strong>Google Analytics for Firebase (GA4) event data:</strong> retained according to Google’s settings for the linked Analytics property. GA4 offers configurable event-data retention (e.g. <strong>2 months or 14 months</strong>, depending on the Controller’s configuration) (set in GA4 Admin → Data Settings → Data Retention). The Developer does not maintain a separate copy of raw analytics logs outside Google’s services.</li>
+  <li><strong>Other data held locally in the same record as above:</strong> same rules as for the <code>video-storage</code> record unless you clear app data or uninstall.</li>
+</ul>
+<p>Deletion of data in Firebase takes place promptly after you complete the action, subject to technical delays in Google’s backup systems.</p>
+
+<h2>7. Your rights</h2>
+<p>Under the GDPR you have the right to:</p>
+<ul>
+  <li><strong>Access</strong> (Art. 15) — obtain information about processing;</li>
+  <li><strong>Rectification</strong> (Art. 16) — correct inaccurate data;</li>
+  <li><strong>Erasure</strong> (Art. 17, &quot;right to be forgotten&quot;) — request deletion;</li>
+  <li><strong>Restriction</strong> (Art. 18);</li>
+  <li><strong>Data portability</strong> (Art. 20);</li>
+  <li><strong>Object</strong> (Art. 21) — especially to processing based on legitimate interests;</li>
+  <li><strong>Withdraw consent</strong> (Art. 7(3)) — at any time, without affecting lawfulness of processing before withdrawal.</li>
+</ul>
+<p><strong>Withdrawing consent:</strong> where processing is based on your consent (personalised ads, <strong>Google Analytics for Firebase (GA4)</strong> in the EEA/UK), you may withdraw consent at any time via the App's consent settings, your device settings, or by contacting the Controller. Withdrawal does not affect the lawfulness of processing before withdrawal. You can also manage ad consent via your Android device settings (e.g. <em>Settings → Google → Ads</em>) and analytics preferences where available in your Google Account.</p>
+<p>To exercise these rights, contact the Controller at <a href="mailto:{{email}}">{{email}}</a>.</p>
+<p>You also have the right to lodge a complaint with a supervisory authority for data protection. In {{residence_country_en}} this is the <strong>{{supervisory_name_en}}</strong>, {{supervisory_address_en}}, <a href="{{supervisory_url}}" target="_blank">{{supervisory_url}}</a>.</p>
+
+<h2>8. Deleting data</h2>
+<p>Instructions for deleting your data are also published as a <strong>standalone web page</strong> at the public URL linked from the App (Account section) and from the Google Play listing — the same host as this Privacy Policy (<a href="delete-data.html">delete-data.html</a>).</p>
+<p>The page does not require login or submission of personal data.</p>
+<p><strong>The Controller does not keep additional copies of user data outside Google’s services used by the App (including Firebase, Google Analytics, and AdMob); all data deletion operations are performed directly in those services.</strong></p>
+<p><strong>You have the right to request permanent deletion of your account and all associated personal data held by the Controller.</strong></p>
+<p>You may delete your account:</p>
+<ul>
+  <li><strong>In the app</strong>, under Account → Delete account;</li>
+  <li>Or by contacting the Controller by email at <a href="mailto:{{email}}">{{email}}</a> (email requests are handled within 30 days).</li>
+</ul>
+<p>The maximum time to respond is 30 days, in accordance with Art. 12(3) GDPR.</p>
+<p><strong>Note on local AsyncStorage data:</strong> data is kept <strong>only on the device</strong> and is <strong>not used by the Controller to identify you</strong> (it may include metadata such as video titles or playlists in the cache). It is <strong>not additionally encrypted at the application level</strong> (OS sandbox). <strong>Remove it by uninstalling the App or clearing app data.</strong> The <code>video-storage</code> key uses an opaque suffix — the email is not stored in plaintext in the key. <strong>Locally stored data is not shared with other apps or transmitted to the Developer’s servers.</strong></p>
+<p>Detailed deletion information is also available on the dedicated page: <a href="delete-data.html">delete-data.html</a> (public URL required by Google Play Data Safety).</p>
+<p>You can delete or restrict data as follows:</p>
+<ul>
+  <li><strong>Logging out of the app or YouTube</strong> (&quot;Account&quot; section): ends the session, removes OAuth tokens from the App, and clears visible state from memory — <strong>this is not the same as automatically deleting the <code>video-storage</code> record from AsyncStorage</strong>. For full removal of the local copy, see below.</li>
+  <li><strong>Permanent removal of the local copy (including the <code>video-storage</code> record):</strong> uninstall the App or clear its data in Android settings (Storage → Clear data / Clear storage).</li>
+  <li><strong>YouTube API access (OAuth):</strong> revoke access at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> — the App cannot fetch new YouTube data until you authorise again; the local <code>video-storage</code> file may still exist until you clear app data or uninstall.</li>
+  <li><strong>Firebase / Firestore data:</strong> delete your account in the App (Account → Delete account) or email the Controller at <a href="mailto:{{email}}">{{email}}</a>.</li>
+  <li><strong>Advertising ID:</strong> reset or disable it in your Android device settings (e.g. Settings → Google → Ads).</li>
+  <li><strong>Google Analytics for Firebase (GA4):</strong> data is held in Google’s analytics systems. Analytics data is not used by the Controller to directly identify you. <strong>Data are processed in pseudonymised form.</strong> Google Analytics for Firebase applies measures that limit identifiability, including IP address anonymisation in line with Google’s practices. You can manage certain Google account–related data and activity controls via <a href="https://myaccount.google.com" target="_blank">myaccount.google.com</a> and Google’s privacy tools; deletion of your Firebase account (see above) does not automatically erase all historical analytics aggregates retained by Google under its policies.</li>
+</ul>
+<p>Some data may continue to be held by third-party providers in accordance with their own policies (e.g. Google).</p>
+
+<h2>9. Children</h2>
+<p>The App is not intended for persons under 16 years of age and is <strong>not directed at children as the primary target audience</strong>. The App is not labelled as children-oriented in Google Play (it is not part of the &quot;Designed for Families&quot; programme). The App is designed for YouTube users who manage playlists and liked videos, which presupposes an active Google/YouTube account and adult-level usage. The Controller does not knowingly collect personal data from children. If you believe a child has provided data through the App, contact <a href="mailto:{{email}}">{{email}}</a> — the Controller will take steps to delete it promptly.</p>
+
+<h2>10. Automated decisions and profiling</h2>
+<p>Personal data collected through the App is <strong>not used for automated decision-making or profiling</strong> within the meaning of Art. 22 GDPR that would produce legal effects or similarly significantly affect you. Standard ad personalisation performed by third-party providers (Google AdMob) based on their own data-processing practices is governed by those providers’ policies and is subject to your consent choices.</p>
+
+<h2>11. Security</h2>
+<p>The Controller applies appropriate technical measures to protect personal data, including:</p>
+<ul>
+  <li>Encrypted communication (HTTPS/TLS) with Google services;</li>
+  <li>OAuth tokens stored locally on the device;</li>
+  <li>Authentication via Firebase Authentication;</li>
+  <li>Firestore security rules limiting write access to user-specific data; the YouTube Charts cache (<code>popularVideos</code>) is configured for public read only.</li>
+  <li>Some technical data may be retained in <strong>Google service system logs</strong> for security and abuse prevention, in line with Google’s practices.</li>
+  <li><strong>On-device local storage</strong> (AsyncStorage, including keys such as <code>video-storage-…</code> and <code>anl_*</code>): <strong>device-only</strong>; <strong>not used by the Controller to identify the user</strong> (may include metadata such as video titles or playlists in the cache). It is <strong>not additionally encrypted at the application level</strong>. <strong>Data are protected by the operating system’s security mechanisms (app sandbox).</strong> <strong>Removed by uninstalling the App or clearing app data.</strong> <strong>Locally stored data is not shared with other apps or transmitted to the Developer’s servers.</strong></li>
+</ul>
+
+<h2>12. Cookies and similar technologies</h2>
+<p>The mobile App does not use cookies in the traditional web sense. Third-party services (Google AdMob, Firebase, including <strong>Google Analytics for Firebase (GA4)</strong>) may use device identifiers, advertising IDs, and similar technologies for advertising and for <strong>usage measurement</strong>, per their policies. Analytics events are sent to Google’s servers when the App runs in production (not in developer debug builds as configured in the App).</p>
+
+<h2>13. Changes</h2>
+<p>The Controller may update this Privacy Policy. Material changes will be communicated via an in-app notice or by updating the date at the top. Please review this Policy periodically.</p>
+
+<h2>14. Contact</h2>
+<div class="contact">
+  <p>For questions about this Privacy Policy or processing of personal data:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></li>
+  </ul>
+</div>
+
+<footer class="doc-footer">
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <a href="delete-data.html">Data Deletion</a>
+</footer>
+
+</body>
+</html>
